@@ -2,8 +2,18 @@
 <html ng-app="userProfiles">
 <head>
   <title>User Profiles</title>
+
+  <style type="text/css">
+      /**
+       * Hide when Angular is not yet loaded and initialized
+       */
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+  </style>
+
 </head>
-<body ng-controller="MainController">
+<body ng-controller="MainController" ng-cloak>
   <div ng-repeat="user in users">
     <h1>{{user.first_name}} {{user.last_name}}</h1>
     <img src="{{user.avatar}}">
